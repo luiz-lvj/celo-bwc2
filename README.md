@@ -1,5 +1,11 @@
 # celo-bwc2
 
+## Our Deploy
+
+We deployed our solution in this contract:
+
+alfajores: 0xfbb040346936B6AD2110df3419A29f12f6e48C36
+
 ## Our idea
 
 Valid Protocol: Empowering Truth-Seekers with Blockchain Technology
