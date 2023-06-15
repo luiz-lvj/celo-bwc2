@@ -1,34 +1,21 @@
 import React from 'react';
+import NYClogo from '../images/Symbol-New-York-Times.png';
+import CNNlogo from '../images/cnn-logo-1-1.png';
+import BBClogo from '../images/bbc-logo-0.png';
+import WPlogo from '../images/washingtonpost_logo_icon_170226.png';
 import './styles.css';
 
 export default function Home() {
     
   return (
-    <div>
-      <div id="banner">
-        <div id="followMakers" className="icon bold">
-          <a href="https://www.makers.build/" target="_blank">Follow Makers!</a>
-        </div>
-        <div id="gitHub" className="icon bold">
-          <a href="https://github.com/LFRezende/Nomad-Protocol" target="_blank">GitHub</a>
-        </div>
-        <div id="address" className="icon bold">
-          <a href="https://goerli.etherscan.io/address/0x8c82b77894f9a1d7bc341af974b545e59428fa67" target="_blank">Transactions</a>
-        </div>
-      </div>
+    <div className='Wrapper'>
       <div id="hero">
-        <label className="toGreen">Nomad</label>
+        <label className="toGreen">Valid</label>
         <label className="green toWhite bold">Protocol</label>
       </div>
       <div id="smallerText">
         <label className="greenHover bold">Truth</label>, deployed by
         <label className="green bold toWhite">tech.</label>
-      </div>
-      <div id="developerAdd">
-        A blockchain-based software developed by
-        <label className="green toWhite bold">
-          <a href="https://www.linkedin.com/in/luis-felipe-rezende/" target="_blank">Luis Felipe Rezende</a>
-        </label>
       </div>
       <div className="subBody">
         <div className="textSpace" id="connectBody">
@@ -56,21 +43,21 @@ export default function Home() {
           </div>
           <div id="firstLineCredited" className="lineCredited">
             <img
-              src="./images/cnn-logo-1-1.png"
+              src={CNNlogo}
               alt="CNN Logo"
               className="imgFormat"
             />
-            <img src="./images/bbc-logo-0.png" alt="BBC Logo" className="bbcFormat" />
+            <img src={BBClogo} alt="BBC Logo" className="bbcFormat" />
           </div>
         </div>
         <div id="secondLineCredited" className="lineCredited">
           <img
-            src="./images/Symbol-New-York-Times.png"
+            src={NYClogo}
             alt="NYTimes Logo"
             className="imgFormat reduceToFifteenPercent"
           />
           <img
-            src="./images/washingtonpost_logo_icon_170226.png"
+            src={WPlogo}
             alt="Washington Post Logo"
             className="imgFormat"
           />

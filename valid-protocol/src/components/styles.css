@@ -1,5 +1,19 @@
 /* ### Detail add-ons  ###*/
 
+
+img {
+    width: 100px;
+}
+
+button {
+    margin-top: 30px;
+}
+
+.Wrapper {
+    width: 100vw;
+    height: 100vh;
+}
+
 /* Font-Related: */
 .bold {
     font-weight: bold;
@@ -54,7 +68,7 @@
     text-decoration: none;
   }
   
-  body {
+  body, html {
     margin: 0px 0px;
     display: flex;
     flex-direction: column;
