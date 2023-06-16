@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './validStyle.css';
 
 export default function Valid() {
   const [cellphone, setCellphone] = useState('');
@@ -18,35 +19,38 @@ export default function Valid() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    <form className="form" onSubmit={handleSubmit}>
+      <label className="form-label">
         Cellphone Number:
         <input
+          className="form-input"
           type="text"
           value={cellphone}
           onChange={(e) => setCellphone(e.target.value)}
         />
       </label>
       <br />
-      <label>
+      <label className="form-label">
         Name:
         <input
+          className="form-input"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
       </label>
       <br />
-      <label>
+      <label className="form-label">
         Company:
         <input
+          className="form-input"
           type="text"
           value={company}
           onChange={(e) => setCompany(e.target.value)}
         />
       </label>
       <br />
-      <button type="submit">Submit</button>
+      <button className="form-button" type="submit">Submit</button>
     </form>
   );
 };

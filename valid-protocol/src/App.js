@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GlobalStyle from "./components/GlobalStyle";
-import Valid from "./components/Valid";
+import Valid from "./components/Valid/Valid";
 import Home from "./components/Home";
 
 function App() {
