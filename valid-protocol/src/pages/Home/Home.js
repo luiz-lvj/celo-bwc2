@@ -21,6 +21,7 @@ export default function Home() {
       <div className="tophome">
         <img className="top-img" src={Validlogo} alt="Valid Logo"></img>
         <label className="top-title">Truth deployed by tech.</label>
+        <label className="top-subtitle">A solution to check false information by connecting the user to the news source.</label>
         <button className="top-button" onClick={() => history("/")}>Connect your wallet</button>
       </div>
       <div className="card-container">
