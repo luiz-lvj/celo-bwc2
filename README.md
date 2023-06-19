@@ -51,5 +51,9 @@ alfajores: 0xfbb040346936B6AD2110df3419A29f12f6e48C36
 
 The UI displays two options:
 - "I'm a Journalist" - a channel for institutional media sources to register themselves, as well as appended information to the blockchain. Via *Celo's Social Connect*, their registered data is stored and retrievable for users to check. The content of the news is an input grabbed by a Smart Contract, deployed at "alfajores: 0xfbb040346936B6AD2110df3419A29f12f6e48C36", then being processed by Celo Network and appended.
-- "I'm a User" - a channel for users to fact-check some piece of information. When some piece of text is inserted as input, the content is grabbed by a function in the Smart Contract. If the content has previously been appended, it returns so, as well as providing data regarding the institution/journalist who appended it to the chain.
+- "I'm a User" - a channel for users to fact-check some piece of information. When some piece of text is inserted as input, the content is grabbed by a function in the Smart Contract. If the content has previously been appended, it returns so, as well as providing data regarding the institution/journalist who appended it to the chain. If the c0ntent has not been previously appended, therefore no credited source has written it, probably being fake.
+
+
+
+  
 
