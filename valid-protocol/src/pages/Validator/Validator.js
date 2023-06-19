@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { connectMetamask } from '../../components/connect';
 import { ethers } from 'ethers';
 import { ABI } from '../../components/contract';
+import Header from '../../components/Header/Header';
 
 export default function Validator() {
 
@@ -66,6 +67,7 @@ export default function Validator() {
 
   return (
     <div className="valid_wrapper">
+      <Header/>
       <div className="parallax"></div>
       <form className="form" onSubmit={handleSubmit}>
         <label className="form-title">ADD LINK TO THE NETWORK</label>

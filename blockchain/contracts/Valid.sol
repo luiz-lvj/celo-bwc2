@@ -20,7 +20,6 @@ contract Valid {
         _;
     }
 
-    
     constructor() {
         owner = msg.sender;
     }

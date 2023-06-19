@@ -12,11 +12,9 @@ const Header = (props) => {
     <Box>
       <LogoIMGStyle src={icon} alt="" onClick={() => history("/home")}/>
       <MenuStyle>
-        <ButtonStyle1 onClick={() => history("/")}>Send link</ButtonStyle1>
+        <ButtonStyle1 onClick={() => history("/")}>Sign up Journalist</ButtonStyle1>
         <ButtonStyle1 onClick={() => history("/verifier")}>Check information</ButtonStyle1>
-        <ButtonStyle onClick={() => history("/")}>
-          Connect your wallet
-        </ButtonStyle>
+
       </MenuStyle>
     </Box>
   );

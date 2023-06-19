@@ -1,8 +1,68 @@
 import React, { useState } from 'react';
 import Header from '../../components/Header/Header';
 import './verifierStyles.css';
+import { connectMetamask } from '../../components/connect';
+import { ABI } from '../../components/contract';
+import { ethers } from 'ethers';
 
 export default function Verifier() {
+
+  const [address, setAddress] = useState('');
+  const [signer, setSigner] = useState('');
+
+  const [loadingSubmit, setLoadingSubmit] = useState(false);
+
+  const [link, setLink] = useState('');
+  async function connect(e){
+    e.preventDefault();
+    const connection = await connectMetamask();
+    if(connection){
+      setAddress(connection.address);
+      setSigner(connection.web3Signer);
+    }
+  }
+
+  async function handleSubmit() {
+    try{
+      setLoadingSubmit(true);
+
+      const connection = await connectMetamask();
+      if(!connection){
+        alert("You need MEtamask!");
+        return;
+      }
+      const contractAddress = "0xfbb040346936B6AD2110df3419A29f12f6e48C36";
+
+      const contract = new ethers.Contract(contractAddress, ABI, connection.web3Signer);
+
+      const bytes32 = ethers.utils.formatBytes32String(link);
+
+      const isValid = await contract.isValidLink(bytes32);
+      if(!isValid){
+        alert("This link is not valid!");
+        return;
+      }
+
+      const journalistAddress = await contract.validLinks(bytes32);
+      const name = await contract.sourcesName(journalistAddress);
+      const phone = await contract.sourcesPhone(journalistAddress);
+      const company = await contract.sourcesCompany(journalistAddress);
+
+      alert(`This link is valid! \n\nJournalist: ${name} \nPhone: ${phone} \nCompany: ${company}`);
+      
+
+
+    } catch(err){
+      console.log(err);
+    } finally{
+      setLoadingSubmit(false);
+    }
+  }
+
+  function getBeautyAddress(addr){
+    return addr.slice(0, 6) + "..." + addr.slice(-4);
+  }
+
 
   return (
     <div className="valid_wrapper">
@@ -10,17 +70,23 @@ export default function Verifier() {
       <div className="parallax"></div>
       <div className="info_wrapper">
         <label className="form-title">CHECK INFORMATION NOW!</label>
-        <button className="connect-button">Connect your wallet</button>
+        <button className="connect-button" onClick={connect} >{address === "" ? "Connect your wallet" : getBeautyAddress(address) }</button>
         <label className="info-label">
           Write below the piece of text you wish to check if is true or false:
           <input
             className="info-input"
             type="text"
             placeholder="News to be credit-checked"
+            value={link}
+            onChange={(e) => setLink(e.target.value)}
           />
         </label>
         <br />
-        <button className="check-button">Check</button>
+        <button 
+        onClick={handleSubmit}
+        className={`check-button ${loadingSubmit ? "loading" : ""} `} >
+          {loadingSubmit ? <div class="lds-ring"><div></div><div></div><div></div><div></div></div> : "Check"}
+        </button>
       </div>
     </div>
   );

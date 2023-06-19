@@ -7,6 +7,7 @@ import { ethers } from 'ethers';
 import { ABI } from '../../components/contract';
 
 
+
 export default function Valid() {
 
   const history = useNavigate();
@@ -29,6 +30,39 @@ export default function Valid() {
       setSigner(connection.web3Signer);
     }
   }
+  
+
+  // async function registerNumber(number) {
+  //   try {
+  //     const verificationTime = Math.floor(new Date().getTime() / 1000);
+
+  //     const identifier = await getIdentifier(number);
+  //     console.log(identifier);
+
+  //     // TODO: lookup list of issuers per phone number.
+  //     // This could be a good example to have for potential issuers to learn about this feature.
+
+  //     const { accounts } =
+  //       await federatedAttestationsContract.lookupAttestations(identifier, [
+  //         issuer.address,
+  //       ]);
+  //     console.log(accounts);
+
+  //     if (accounts.length == 0) {
+  //       const attestationReceipt = await federatedAttestationsContract
+  //         .registerAttestationAsIssuer(identifier, address, verificationTime)
+  //         .sendAndWaitForReceipt();
+  //       console.log("attestation Receipt status:", attestationReceipt.status);
+  //       console.log(
+  //         `Register Attestation as issuer TX hash: ${network.explorer}/tx/${attestationReceipt.transactionHash}/internal-transactions`
+  //       );
+  //     } else {
+  //       console.log("phone number already registered with this issuer");
+  //     }
+  //   } catch (error) {
+  //     throw `Error registering phone number: ${error}`;
+  //   }
+  // }
 
   const handleSubmit = async (e) => {
     try{
@@ -109,7 +143,7 @@ export default function Valid() {
         <br />
         <button className={`form-button ${loadingSubmit ? "loading" : ""} `} type="submit" >
           {loadingSubmit ? <div class="lds-ring"><div></div><div></div><div></div><div></div></div> : "Submit"}
-          </button>
+        </button>
       </form>
     </div>
   );
