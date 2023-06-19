@@ -1,0 +1,127 @@
+
+
+.valid_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.parallax{
+    background-image: url('../../images/newspaper_bkg.jpg');
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    background-attachment: fixed;
+}
+
+.connect-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5vh;
+    padding: 1vw;
+    margin-bottom: 5vh;
+
+    background-color: rgb(49, 49, 49);
+    border:  solid 2px;
+    border-radius: 2vw;
+
+    color: #4adf86;
+    font-size: 1.2vw;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: .6s;
+}
+
+.connect-button:hover {
+    background-color: #4adf86;
+    color: rgb(49, 49, 49);
+    transition: .6s;
+}
+
+.form-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #4adf86;
+    font-size: 1.6vw;
+    font-weight: 600;
+    margin-bottom: 6vh;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3vh;
+    width: 60vw;
+    height: 90vh;
+    padding: 5vh;
+    border-radius: 5vh;
+
+    background-color: #1c1c1c;
+}
+
+.form-label {
+    font-size: 1.2vw;
+    margin-bottom: 2vh;
+    text-align: left;
+    text-indent: 1vw;
+    width: 100%;
+    color: white;
+}
+
+.form-input {
+    padding: 1vw;
+    border: 1px solid #ccc;
+    border-radius: 2vw;
+    width: 100%;
+    height: 5vh;
+    margin-top: 2vh;
+
+    font-size: 1.2vw;
+    outline: none;
+    transition: background-color 1s;
+}
+
+.form-input:hover {
+    background-color: #cccccc;
+    transition: 1s;
+}
+
+.form-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5vh;
+    padding: 1vw;
+
+    background-color: #4adf86;
+    border: none;
+    border-radius: 2vw;
+
+    color: #fff;
+    font-size: 1.2vw;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: .6s;
+}
+
+.form-button:hover {
+    background-color: rgb(49, 49, 49);
+    color: #4adf86;
+    transition: .6s;
+}

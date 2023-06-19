@@ -1,0 +1,90 @@
+:root {
+    --viewport-side: 30vh;
+    --viewport-comp-side: 30vw;
+    --color-valid: #4adf86;
+    --color-dark: #3a3a3a;
+}
+
+body, html{
+    padding: 0;
+    margin: 0;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.v_flip_card {
+    width: calc(min(var(--viewport-side), var(--viewport-comp-side)));
+    height: calc(min(var(--viewport-side), var(--viewport-comp-side)));
+    margin-left: calc(var(--viewport-side) * 0.07);
+    margin-right: calc(var(--viewport-side) * 0.07);;
+    perspective: calc(var(--viewport-side) * 3.2);; /* Remove this if you don't want the 3D effect */
+    cursor: pointer;
+  }
+  
+  /* This container is needed to position the front and back side */
+.v_flip_card_inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1.0s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.v_flip_card:hover .v_flip_card_inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.v_flip_card_front, .v_flip_card_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.v_img_card {
+    width: calc(min(var(--viewport-side), var(--viewport-comp-side)));
+    height: calc(min(var(--viewport-side), var(--viewport-comp-side)));
+}
+
+/* Style the front side (fallback if image is missing) */
+.v_flip_card_front {
+    background-color: #bbb;
+    color: black;
+}
+
+.v_title_card {
+    position: fixed;
+    background-color: var(--color-valid);
+    color: black;
+
+    margin-top: calc(var(--viewport-side) * -0.25);
+    margin-left: calc(var(--viewport-side) * 0.08);
+    padding-left: calc(var(--viewport-side) * 0.03);
+    padding-right: calc(var(--viewport-side) * 0.03);
+
+    font-size: calc(var(--viewport-side) * 0.12);
+    font-weight: 700;
+}
+
+/* Style the back side */
+.v_flip_card_back {
+    background-color: var(--color-dark);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.v_card_h1 {
+    margin-top: 30%;
+    font-size: calc(var(--viewport-side) * 0.14);
+    font-weight: bold;
+    color: white;
+}
+
+.v_card_p {
+    margin-top: 5%;
+    font-size: calc(var(--viewport-side) * 0.07);
+    color: white;
+}
