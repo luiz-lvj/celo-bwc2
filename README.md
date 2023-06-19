@@ -1,10 +1,10 @@
-# celo-bwc2
+# Valid Protocol - Celo-bwc2 Hackathon 
 
-## Our Deploy
+Valid Protocol is a blockchain-based solution for checking the reliability of information - a technological solution to solve the problems derived of Fake News, discarding the use of censorship or government/private interventions. 
 
-We deployed our solution in this contract:
+We believe that technology is the best way to solve problems derived from technology itself - so that's what we are proposing.
 
-alfajores: 0xfbb040346936B6AD2110df3419A29f12f6e48C36
+This project is a solution proposed for the Celo-BWC2 Hackathon.
 
 ## Our idea
 
@@ -12,14 +12,24 @@ Valid Protocol: Empowering Truth-Seekers with Blockchain Technology
 
 Valid Protocol is an app that uses SocialConnect and blockchain to ensure the trust about news. 
 
-Our structure is symple and efficient and basically uses the most powerful thing about SocialConnect, the social identifiers to verify autenthic journalists and news source, and the most powerful thing about blockchain, a descentralized use for everyone access and verify the information.
+Our structure is symple and efficient and basically uses the most powerful thing about SocialConnect, the social identifiers to verify autenthic journalists and news source, and the most powerful thing about blockchain, a decentralized use for everyone to access and verify information.
 
 A groundbreaking app that harnesses the transformative potential of blockchain technology to counter the rampant spread of fake news. By leveraging blockchain's immutable and transparent nature, Valid Protocol ensures the authenticity and reliability of news content. Join us in the quest for truth and a more informed society with Valid Protocol.
 
+## How does it work?
+
+When someone wishes to check the reliability of information, the majority of people depends on checking whether or not the source which emitted this material is a trustworthy source. This is the nature of information gathering, as if faith is not used as a basis for fact-checking, every single person would need to have deep knowledge of the subject in question to fact-check it.
+
+## Our Deploy
+
+We deployed our solution in this contract:
+
+alfajores: 0xfbb040346936B6AD2110df3419A29f12f6e48C36
+
+
+
 ## Our app
 
-Fetch data from an API
-The project does this in two different ways:
 
 First, we have a .env file (obviously not pushed into gitHub) that fetches the ETHERSCAN_API_KEY to verify the Smart Contract and access Etherscan (a block explorer, kinda like google but for blockchain).;
 Second, the framework used (Hardhat) fetches the required APIs for deployment via the "hardhat-deploy" packaged, installed via the command yarn add --dev hardhat-deploy.
@@ -39,8 +49,3 @@ Hardhat access the deployments through built-in protocols to fetch the correspon
 Have a simple UI and a way to interact with it
 The frontend folder has all of the necessary UI coded.
 
-Deploy: put your code to work online so that other people can use it
-The site is deployed on Netlify (https://peppy-cheesecake-f1cd4f.netlify.app/) - though, for purely aesthetic reasons, the free version of it is poorly optimized, so the aesthetics may suffer a bit. The website is still 100% operational, though.
-
-Record your Demo
-The Demo can be accessed here: https://www.loom.com/share/052cdf5e6e664e2ab932fd8c54f47b9d
