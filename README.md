@@ -32,11 +32,11 @@ The keywords are **Decentralization** and **Immutability**.
 
 If some news is appended to some centralized database, such as Google Cloud, we are faced with severable problems:
 
-- A centralized database may be hacked: politically fueled groups may hack the serves of the company and alter the content stored, leading to insecurity when regarding quality of information, mining credibility of news portals or even validating misinformation as the truth.
+- A centralized database may be hacked: politically fueled groups may hack the serves of the company and alter the content stored, leading to insecurity when regarding the quality of information, mining the credibility of news portals or even validating misinformation as the truth.
 - Centralized information may be censored by the very owners of it. Numerous scandals have already reported the algorithmic biases of digital marketing led by platforms like Google and Facebook, so we have no guarantee that the same will not happen with the news appended to their databases.
 - If the information is centralized, is hackable - therefore, it may change. Henceforth, truth becomes relative.
 
-Blockchain is the evolution of security, ownership and transparency, being the perfect neutral groungg for different sources to input news, as well as for users to fact-check and consume qualified information.
+Blockchain is the evolution of security, ownership, and transparency, being the perfect neutral grouund for different sources to input news, as well as for users to fact-check and consume qualified information.
 
 
 ## Our Deploy
@@ -49,22 +49,7 @@ alfajores: 0xfbb040346936B6AD2110df3419A29f12f6e48C36
 
 ## Our app
 
-
-First, we have a .env file (obviously not pushed into gitHub) that fetches the ETHERSCAN_API_KEY to verify the Smart Contract and access Etherscan (a block explorer, kinda like google but for blockchain).;
-Second, the framework used (Hardhat) fetches the required APIs for deployment via the "hardhat-deploy" packaged, installed via the command yarn add --dev hardhat-deploy.
-Have a database
-Indeed we have - it is the Blockchain! In fact, the Goerli Testnet is a decentralized server. All of the transactions may be seen in this link:
-
-https://goerli.etherscan.io/address/0x8c82b77894f9a1d7bc341af974b545e59428fa67
-
-This database stores the accounts and names of credited sources appended by an Administrator, and they append reliable information to the chain, readily accessible for auditability - all of these are stored in the database.
-
-Have an API to communicate with your database
-Indeed:
-
-We fetch manually the etherscan_api_key for communication with the block explorer for verification.
-The frontend connects to the server side via the Ethers.js library, which fetches the APIs of Goerli Testnet for interaction with the Smart Contract.
-Hardhat access the deployments through built-in protocols to fetch the correspondent APIs as well.
-Have a simple UI and a way to interact with it
-The frontend folder has all of the necessary UI coded.
+The UI displays two options:
+- "I'm a Journalist" - a channel for institutional media sources to register themselves, as well as appended information to the blockchain. Via *Celo's Social Connect*, their registered data is stored and retrievable for users to check. The content of the news is an input grabbed by a Smart Contract, deployed at "alfajores: 0xfbb040346936B6AD2110df3419A29f12f6e48C36", then being processed by Celo Network and appended.
+- "I'm a User" - a channel for users to fact-check some piece of information. When some piece of text is inserted as input, the content is grabbed by a function in the Smart Contract. If the content has previously been appended, it returns so, as well as providing data regarding the institution/journalist who appended it to the chain.
 
