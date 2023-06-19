@@ -15,7 +15,7 @@ const Header = (props) => {
         <ButtonStyle1 onClick={() => history("/")}>Send link</ButtonStyle1>
         <ButtonStyle1 onClick={() => history("/verifier")}>Check information</ButtonStyle1>
         <ButtonStyle onClick={() => history("/")}>
-          Conecte sua carteira
+          Connect your wallet
         </ButtonStyle>
       </MenuStyle>
     </Box>
