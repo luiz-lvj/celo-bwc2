@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Header from '../../components/Header/Header';
 import './validStyle.css';
 import { useNavigate } from 'react-router-dom';
 import { connectMetamask } from '../../components/connect';
@@ -68,6 +69,7 @@ export default function Valid() {
 
   return (
     <div className="valid_wrapper">
+      <Header/>
       <div className="parallax"></div>
       <form className="form" onSubmit={handleSubmit}>
         <label className="form-title">JOURNALIST INFORMATION</label>

@@ -57,7 +57,7 @@
     color: #4adf86;
     font-size: 1.6vw;
     font-weight: 600;
-    margin-bottom: 6vh;
+    margin-bottom: 4vh;
 }
 
 .form {
@@ -65,8 +65,9 @@
     flex-direction: column;
     align-items: center;
     padding-top: 3vh;
+    margin-top: 8vh;
     width: 60vw;
-    height: 90vh;
+    height: 85vh;
     padding: 5vh;
     border-radius: 5vh;
 
@@ -75,7 +76,7 @@
 
 .form-label {
     font-size: 1.2vw;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
     text-align: left;
     text-indent: 1vw;
     width: 100%;

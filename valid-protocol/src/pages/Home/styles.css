@@ -32,7 +32,7 @@
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  height: 65vh;
+  height: 85vh;
 }
 
 .top-title {
@@ -40,6 +40,16 @@
   font-weight: bold;
   color: var(--color-valid);
   background-color: var(--color-dark);
+  padding: 1vh;
+}
+
+.top-subtitle {
+  font-size: 1.2vw;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-dark);
+  background-color: rgba(255, 255, 255, 0.95);
+  margin-top: 1vh;
   padding: 1vh;
 }
 
