@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import Header from '../../components/Header/Header';
 import './verifierStyles.css';
 
 export default function Verifier() {
 
   return (
     <div className="valid_wrapper">
+      <Header/>
       <div className="parallax"></div>
       <div className="info_wrapper">
         <label className="form-title">CHECK INFORMATION NOW!</label>

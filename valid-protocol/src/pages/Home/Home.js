@@ -1,6 +1,7 @@
 import React from 'react';
 import CardValid from '../../components/CardValid/CardValid';
 import CardVerifier from '../../components/CardVerifier/CardVerifier';
+import Header from '../../components/Header/Header';
 import NYClogo from '../../images/Symbol-New-York-Times.png';
 import CNNlogo from '../../images/cnn-logo-1-1.png';
 import BBClogo from '../../images/bbc-logo-0.png';
@@ -15,6 +16,7 @@ export default function Home() {
     
   return (
     <div className='wrapper'>
+      <Header/>
       <div className="parallax"></div>
       <div className="tophome">
         <img className="top-img" src={Validlogo} alt="Valid Logo"></img>
@@ -23,7 +25,7 @@ export default function Home() {
       </div>
       <div className="card-container">
         <div className="container-card-title">
-          What do you want?
+          Who are you?
         </div>
         <div className="card-bar">
           <CardValid onClick={() => history("/")}/>
