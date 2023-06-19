@@ -3,7 +3,7 @@ import { connectMetamask } from './connect';
 import { ethers } from 'ethers';
 import { ABI } from './contract';
 import { useNavigate } from 'react-router-dom';
-import { newKit } from "@celo/contractkit";
+
 
 
 export default function Valid() {
