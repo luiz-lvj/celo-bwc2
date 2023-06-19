@@ -18,7 +18,20 @@ A groundbreaking app that harnesses the transformative potential of blockchain t
 
 ## How does it work?
 
-When someone wishes to check the reliability of information, the majority of people depends on checking whether or not the source which emitted this material is a trustworthy source. This is the nature of information gathering, as if faith is not used as a basis for fact-checking, every single person would need to have deep knowledge of the subject in question to fact-check it.
+When someone wishes to check the reliability of some piece of information, the majority of people depends on checking whether or not the source which emitted this material is trustworthy. This is the nature of information gathering, as if faith is not used as a basis for fact-checking, every single person would need to have deep knowledge of the subject in question to fact-check it. Therefore, source-checking provides the best level of security about the content of some news - if it has been published, it has a higher probability of being truth than if it hadn't.
+
+Valid Protocol is based on that exact philosophy. 
+
+Every single bit of news a trustworthy source wishes to publish to the public (let it be CNN, New York Times, Washington Post etc.) can be also submitted into a platform which will receive the content of the news and append it into the blockchain. The information of the institution will also be avaiable, via Celo's *SocialConnect* protocol.
+
+On the same page, users who wish to check the credibility of some information they received (via private messages, low-traffic portals or Telegram groups) can input them into Valid Protocol's platform and check if the requisited piece of information has already been appended by some credited source.
+
+But here comes the question: **Why appending news to the blockchain is helpful when fighting misinformation**?
+
+The key words are **Decentralization** and **Immutability**.
+
+When some news
+
 
 ## Our Deploy
 
